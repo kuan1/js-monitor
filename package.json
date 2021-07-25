@@ -1,6 +1,6 @@
 {
   "name": "@luzhongk/js-monitor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "入门级别的前端监控sdk",
   "main": "dist/js-monitor.cjs.js",
   "module": "dist/js-monitor.esm.js",
