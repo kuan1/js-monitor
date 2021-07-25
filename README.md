@@ -20,9 +20,9 @@
 ```html
 <% if (process.env.NODE_ENV === 'production') { %>
 <script
+  src="https://cdn.jsdelivr.net/npm/@luzhongk/js-monitor@1.0.0"
   data-pid="测试01"
   data-report="/api/monitor/report"
-  src="https://img1.halobear.com/static/haloMonitor.2.0.1.js"
 ></script>
 <% } %>
 ```
