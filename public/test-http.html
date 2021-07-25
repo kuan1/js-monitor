@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>测试http错误</title>
+  <script src="./js-monitor.global.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script data-pid="测试http" data-report="/api/monitor/report" src="js-monitor.global.js"></script>
+</head>
+
+<body>
+  <h2>@luzhongk/monitor</h2>
+  <p>测试http错误</p>
+  <button>发送</button>
+  <script>
+    document.querySelector('button').onclick = () => {
+      fetch('http://127.0.0.1:5500/public/test-http/1')
+        .then((res) => {
+          res.text().then((r) => console.log(11, r))
+        })
+        .catch((res) => {
+          console.log(22, res)
+        })
+
+      axios({
+        url: 'http://127.0.0.1:5500/public/test-http/2',
+      })
+        .then((res) => {
+          console.log(33, res)
+        })
+        .catch((e) => {
+          console.log(44, e)
+        })
+    }
+  </script>
+</body>
+
+</html>

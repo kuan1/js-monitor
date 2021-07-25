@@ -1,0 +1,58 @@
+{
+  "name": "@luzhongk/js-monitor",
+  "version": "1.0.0",
+  "description": "入门级别的前端监控sdk",
+  "main": "dist/js-monitor.cjs.js",
+  "module": "dist/js-monitor.esm.js",
+  "jsdelivr": "dist/js-monitor.global.js",
+  "types": "dist/js-monitor.d.ts",
+  "scripts": {
+    "dev": "NODE_ENV=development node scripts/dev",
+    "build": "NODE_ENV=production node scripts/build -t && rm -fr dist/src",
+    "build:esm": "yarn build -f esm",
+    "build:global": "yarn build -f global",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "buildOptions": {
+    "name": "jsMonitor",
+    "formats": [
+      "esm",
+      "cjs",
+      "global"
+    ]
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.13.2",
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^8.4.0",
+    "@typescript-eslint/eslint-plugin": "^3.6.1",
+    "@typescript-eslint/parser": "^3.6.1",
+    "autoprefixer": "^9.8.6",
+    "chalk": "^4.1.0",
+    "eslint": "^7.4.0",
+    "execa": "^5.0.0",
+    "fs-extra": "^9.1.0",
+    "minimist": "^1.2.5",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.21.0",
+    "rollup-plugin-postcss": "^3.1.8",
+    "rollup-plugin-terser": "^6.1.0",
+    "rollup-plugin-typescript2": "^0.27.2",
+    "typescript": "^3.9.3",
+    "zlib": "^1.0.5"
+  },
+  "author": "kuan1",
+  "license": "MIT",
+  "repository": {
+    "type": "git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}
